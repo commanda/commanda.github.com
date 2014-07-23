@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+.progress-bar
+{
+	width: 100%;
+	margin-top: 200px;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+window.onload = function() {
+  showProgressBar();
+};
+
+function showProgressBar() {
+    var progressBar = document.createElement("PROGRESS");
+
+	var todayMillis = new Date().getTime();
+	var startDateMillis = new Date("6/6/2014").getTime();
+	var endDateMillis = new Date("3/13/2015").getTime();
+	var soFar = todayMillis - startDateMillis;
+	var total = endDateMillis - startDateMillis;
+	
+    progressBar.setAttribute("value", soFar);
+    progressBar.setAttribute("max", total);
+
+    progressBar.setAttribute("class", "progress-bar");
+
+    document.body.appendChild(progressBar);
+}
+</script>
+
+</body>
+</html>
