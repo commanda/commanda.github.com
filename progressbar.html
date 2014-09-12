@@ -20,7 +20,7 @@ window.onload = function() {
 };
 
 function showProgressBar() {
-    var progressBar = document.createElement("PROGRESS");
+    	var progressBar = document.createElement("PROGRESS");
 
 	var todayMillis = new Date().getTime();
 	var startDateMillis = new Date("6/21/2014").getTime();
@@ -28,12 +28,12 @@ function showProgressBar() {
 	var soFar = todayMillis - startDateMillis;
 	var total = endDateMillis - startDateMillis;
 	
-    progressBar.setAttribute("value", soFar);
-    progressBar.setAttribute("max", total);
+	progressBar.setAttribute("value", soFar);
+    	progressBar.setAttribute("max", total);
 
-    progressBar.setAttribute("class", "progress-bar");
+    	progressBar.setAttribute("class", "progress-bar");
 
-    document.body.appendChild(progressBar);
+    	document.body.appendChild(progressBar);
 }
 </script>
 
